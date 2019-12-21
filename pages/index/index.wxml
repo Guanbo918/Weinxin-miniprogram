@@ -1,0 +1,60 @@
+<!-- 背景圖片 -->
+<view class="content">
+</view>
+
+<view>
+  <view class='wrapper'>
+    <image src='../../assets/search.png' class="img"></image>
+    <input bindconfirm="cityInput" placeholder-class='placeholderClass' placeholder='请输入城市名，快速查询天气信息' maxlength='20' confirm-type='search' value="{{inputValue}}"></input>
+  </view>
+  <view style="padding-top:80rpx;">
+    <view class="top">
+      <view>
+        <image style="width:100rpx;height:100rpx;" src="../../assets/icons/100.png"></image>
+      </view>
+      <view>
+        <view style="padding-top:10rpx;">
+          <view style="color:wheat;">Today</view>
+          <view style="font-size:25rpx; color:wheat;">2019-12-21</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="position">
+    <view>
+      <view class="center" style="font-size: 150rpx;">19°</view>
+      <view class="center font">
+        <text decode="true">阴&nbsp;&nbsp;|&nbsp;&nbsp;空气&nbsp;&nbsp;优</text>
+      </view>
+      <view class="center font">
+        <text decode="true">东莞市&nbsp;&nbsp;市辖区&nbsp;&nbsp;大院街</text>
+      </view>
+    </view>
+  </view>
+  <view style="margin:50rpx 0;">
+    <scroll-view scroll-x>
+      <view class="threehour">
+        <view wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}">
+          <view class="oval font swper">
+            <view style="width: 120rpx;height: 232rpx;line-height: 41rpx;">
+              <view class="center">21日</view>
+              <view class="center">12时</view>
+              <image class="center index_img" style="width:70rpx;height:70rpx;margin:0 auto;" src="../../assets/icons/紫外线指数.png"></image>
+              <view class="center">北风</view>
+              <view class="center">21°</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:for="{{[1,2,3,4,5,6,7]}}" wx:for-index="i" wx:for-item="item">
+    <view class="horizontal index font">
+      <image class="index_img" src="../../assets/icons/紫外线指数.png"></image>
+      <view>
+        <view>紫外线指数 最弱 </view>
+        <view>辐射弱，涂擦SPF8-12防晒护肤品。</view>
+      </view>
+    </view>
+  </view>
+</view>
