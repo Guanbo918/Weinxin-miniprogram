@@ -1,0 +1,2 @@
+# Weinxin-miniprogram
+Hello,world
