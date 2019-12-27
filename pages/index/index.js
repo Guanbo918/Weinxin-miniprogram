@@ -1,5 +1,6 @@
 //index.js
-//获取应用实例
+// //获取天气信息
+//鑾峰彇搴旂敤瀹炰緥
 const app = getApp()
 Page({
   data: {
@@ -8,7 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
-  //事件处理函数
+  //浜嬩欢澶勭悊鍑芥暟
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
@@ -22,17 +23,14 @@ Page({
         hasUserInfo: true
       })
     } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
+      // 鐢变簬 getUserInfo 鏄綉缁滆姹傦紝鍙兘浼氬湪 Page.onLoad 涔嬪悗鎵嶈繑鍥�      // 鎵�互姝ゅ鍔犲叆 callback 浠ラ槻姝㈣繖绉嶆儏鍐�      app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
       }
     } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
+      // 鍦ㄦ病鏈�open-type=getUserInfo 鐗堟湰鐨勫吋瀹瑰鐞�      wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
           this.setData({
@@ -43,7 +41,7 @@ Page({
       })
     }
   },
-  //获取城市信息
+  //鑾峰彇鍩庡競淇℃伅
   cityInput:function(e){
     var that = this;
     var city = e.detail.value;
