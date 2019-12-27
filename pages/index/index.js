@@ -1,5 +1,4 @@
 //index.js
-// //获取天气信息
 //鑾峰彇搴旂敤瀹炰緥
 const app = getApp()
 Page({
