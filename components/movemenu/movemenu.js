@@ -1,8 +1,7 @@
-// components/menu/menu.js
+// components/menu/menu.js 添加了菜单点击事件和对应的功能显示
 Component({
   /**
-   * 组件的属性列表
-   */
+   * 缁勪欢鐨勫睘鎬у垪琛�   */
   properties: {
     mainmodel: {
       type: Object,
@@ -15,15 +14,13 @@ Component({
   },
 
   /**
-   * 组件的初始数据
-   */
+   * 缁勪欢鐨勫垵濮嬫暟鎹�   */
   data: {
     showmenus:true,
   },
 
   /**
-   * 组件的方法列表
-   */
+   * 缁勪欢鐨勬柟娉曞垪琛�   */
   methods: {
     showclick:function(){
       //console.log("showclick")
